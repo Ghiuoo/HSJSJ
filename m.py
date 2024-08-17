@@ -8,10 +8,10 @@ import datetime
 import os
 
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7444377297:AAGeX26dq6zCt636l3JZetK2wrvbZlYvGTE')
+bot = telebot.TeleBot('7220515599:AAGM2e1lR9SPhgGI5wkXzMreMM8aXPry-2g')
 
 # Admin user IDs
-admin_id = ["6769245930"]
+admin_id = ["6053677664"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -103,7 +103,7 @@ def add_user(message):
         else:
             response = "Please specify a user ID to add."
     else:
-        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @S4_LUCHI"
+        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @YUVRAJXMODS"
 
     bot.reply_to(message, response)
 
@@ -225,7 +225,7 @@ def handle_bgmi(message):
         if user_id not in admin_id:
             # Check if the user has run the command before and is still within the cooldown period
             if user_id in bgmi_cooldown and (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds < 180:
-                response = "You Are On Cooldown. Please Wait 3min Before Running The /attack1 Command Again by S4 OFFICIAL."
+                response = "You Are On Cooldown. Please Wait 3min Before Running The /attack1 Command Again by @YUVRAJXMODS."
                 bot.reply_to(message, response)
                 return
             # Update the last time the user ran the command
@@ -248,7 +248,7 @@ def handle_bgmi(message):
         else:
             response = "🌹⚡ᴀᴠᴀɪʟᴀʙʟᴇ⚡🌹\n/ʙɢᴍɪ <ᴛᴀʀɢᴇᴛ> <ᴘᴏʀᴛ> <ᴛɪᴍᴇ>\nʙʏ ꜱ4 ᴏꜰꜰɪᴄɪᴀʟ 🇮🇳🇮🇳"  # Updated command syntax
     else:
-        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @S4_LUCHI"
+        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @YUVRAJXMODS"
 
     bot.reply_to(message, response)
 
@@ -270,7 +270,7 @@ def show_command_logs(message):
         except FileNotFoundError:
             response = "No command logs found."
     else:
-        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @S4_LUCHI"
+        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @YUVRAJXMODS"
 
     bot.reply_to(message, response)
 
@@ -285,7 +285,7 @@ def show_help(message):
 
  To See Admin Commands:
  /admincmd : Shows All Admin Commands.
- �҉�҉S4 OFFICIAL�҉�
+ @YUVRAJXMODS
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -312,13 +312,13 @@ def welcome_rules(message):
 1. Dont Run Too Many Attacks !! Cause A Ban From Bot
 2. Dont Run 2 Attacks At Same Time Becz If U Then U Got Banned From Bot. 
 3. We Daily Checks The Logs So Follow these rules to avoid Ban!!
-By �҉�҉S4 OFFICIAL�҉�'''
+By @YUVRAJXMODS'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['plan'])
 def welcome_plan(message):
     user_name = message.from_user.first_name
-    response = f'''{user_name}, Brother Only 1 Plan Is Powerfull Then Any Other Ddos BY �҉�҉S4 OFFICIAL�҉� !!:
+    response = f'''{user_name}, Brother Only 1 Plan Is Powerfull Then Any Other Ddos BY @YUVRAJXMODS !!:
 
 Vip :
 -> Attack Time : 200 (S)
@@ -329,7 +329,7 @@ Pr-ice List:
 Day-->150 Rs
 Week-->900 Rs
 Month-->1600 Rs
-�҉�҉S4 OFFICIAL�҉�
+@YUVRAJXMODS
 '''
     bot.reply_to(message, response)
 
@@ -344,7 +344,8 @@ def welcome_plan(message):
 /logs : All Users Logs.
 /broadcast : Broadcast a Message.
 /clearlogs : Clear The Logs File.
-�҉�҉S4 OFFICIAL�҉�
+
+@YUVRAJXMODS
 '''
     bot.reply_to(message, response)
 
@@ -367,7 +368,7 @@ def broadcast_message(message):
         else:
             response = "Please Provide A Message To Broadcast."
     else:
-        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @S4_LUCHI"
+        response = "𝘠𝘖𝘜 𝘊𝘈𝘕 𝘜𝘚𝘌 𝘛𝘏𝘐𝘚 𝘛𝘐𝘔𝘌 𝘗𝘓𝘌𝘈𝘚𝘌 𝘋𝘔 𝘖𝘞𝘕𝘌𝘙 ~ @YUVRAJXMODS"
 
     bot.reply_to(message, response)
 
